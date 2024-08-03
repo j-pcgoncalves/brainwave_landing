@@ -4,6 +4,7 @@ import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
+import { HamburgerMenu } from "./design/Header";
 
 const Header = () => {
     const pathname = useLocation();
@@ -47,8 +48,15 @@ const Header = () => {
                         ))}
                     </div>
 
-                    
+                    <HamburgerMenu />
                 </nav>
+
+                <a
+                    href="#signup"
+                    className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+                >
+                    New account
+                </a>
             </div>
         </div>
     );
