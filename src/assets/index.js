@@ -5,6 +5,7 @@ import homeSmile from "./home-smile.svg";
 import file02 from "./file-02.svg";
 import searchMd from "./search-md.svg";
 import plusSquare from "./plus-square.svg";
+import yourlogo from "./yourlogo.svg";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -30,4 +31,5 @@ export {
     notification2,
     notification3,
     notification4,
+    yourlogo,
 }
