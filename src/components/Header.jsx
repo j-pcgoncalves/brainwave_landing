@@ -5,6 +5,8 @@ import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
 import { HamburgerMenu } from "./design/Header";
+import Button from "./Button";
+import MenuSvg from "../assets/svg/MenuSvg";
 
 const Header = () => {
     const pathname = useLocation();
@@ -57,6 +59,17 @@ const Header = () => {
                 >
                     New account
                 </a>
+                <Button className="hidden lg:flex" href="#login">
+                    Sign in
+                </Button>
+
+                <Button 
+                    className="ml-auto lg:hidden" 
+                    px="px-3" 
+                    onClick={toggleNavigation}
+                >
+                    <MenuSvg openNavigation={openNavigation} />
+                </Button>
             </div>
         </div>
     );
