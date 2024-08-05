@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import Section from "./Section";
-import { curve, robot } from "../assets";
+import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button";
 import Generating from "./Generating";
 import { ScrollParallax } from "react-just-parallax";
 import { heroIcons } from "../constants";
+import Notification from "./Notification";
+import { BackgroundCircles, Gradient } from "./design/Hero";
 
 const Hero = () => {
     const parallaxRef = useRef(null);
@@ -66,11 +68,27 @@ const Hero = () => {
                                 </ScrollParallax>
 
                                 <ScrollParallax isAbsolutelyPositioned>
-                                    
+                                    <Notification 
+                                        className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
+                                        title="Code generation"
+                                    />
                                 </ScrollParallax>
                             </div>
                         </div>
+
+                        <Gradient />
                     </div>
+                    <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+                        <img 
+                            src={heroBackground}
+                            className="w-full"
+                            width={1440}
+                            height={1800}
+                            alt="Hero"
+                        />
+                    </div>
+
+                    <BackgroundCircles />
                 </div>
             </div>
         </Section>
